@@ -1,3 +1,5 @@
+using System;
+
 namespace Anagram
 {
   public class Anagram
@@ -16,13 +18,23 @@ namespace Anagram
     public bool IsAnagram(string input1, string input2)
     {
       char[] userWord1 = input1.ToCharArray();
-      char[] userWord2 = input2.ToCharArray();
-      Array.Sort(userWord1);
-      Array.Sort(userWord2);
-      foreach (char letter in userWord1)
+      string[] userWordList = input2.Split(' ');
+      foreach (string word in userWordList)
       {
-        if ()
+        char[] userWord2 = word.ToCharArray();
+        Array.Sort(userWord1);
+        Array.Sort(userWord2);
+        if (new string(userWord1) == new string(userWord2))
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
       }
+      return false;
+
     }
   }
 }
