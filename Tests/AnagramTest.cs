@@ -15,5 +15,11 @@ namespace Anagram
       var testAnagram = new Anagram();
       Assert.Equal(false, testAnagram.InputIsSame("n", "a"));
     }
+    [Fact]
+    public void AnagramTest_StringIsAnagramTrue()
+    {
+      // var testAnagram = new Anagram();
+      // Assert.Equal(true, testAnagram.IsAnagram("read", "dear"));
+    }
   }
 }
